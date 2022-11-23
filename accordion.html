@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" 
+        crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 50vw;
+        }
+    </style>
+    <title>Bootstrap_02</title>
+</head>
+<body>
+
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" id="aba01" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          CÓDIGO
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"></div>
+      </div>
+    </div>
+
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed"  id="aba02" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          NOME
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"></div>
+      </div>
+    </div>
+
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed"  id="aba03" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          DETALHAMENTO
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+
+
+var objetos = [{
+  codigo1: '#1',
+  nome1: prompt('Digite o nome da sua tarefa 1:'),
+  detalhamento1: prompt('Digite o detalhamento da tarefa:'),
+},{
+  codigo2: '#2',
+  nome2: prompt('Digite o nome da sua tarefa 2:'),
+  detalhamento2: prompt('Digite o detalhamento da tarefa:'),
+},{
+  codigo3: '#3',
+  nome3: prompt('Digite o nome da sua tarefa 3:'),
+  detalhamento3: prompt('Digite o detalhamento da tarefa:'),
+}];
+
+
+var titulo01 = document.getElementById('aba01').innerHTML= objetos[0].nome1 + objetos[0].codigo1;
+var titulo02 = document.getElementById('aba02').innerHTML= objetos[1].nome2 + objetos[1].codigo2;
+var titulo03 = document.getElementById('aba03').innerHTML= objetos[2].nome3 + objetos[2].codigo3;
+
+var conteudo01 = document.getElementById('flush-collapseOne').innerHTML= objetos[0].detalhamento1;
+var conteudo02 = document.getElementById('flush-collapseTwo').innerHTML= objetos[1].detalhamento2;
+var conteudo03 = document.getElementById('flush-collapseThree').innerHTML= objetos[2].detalhamento3;
+
+  </script>
+
+
+</body>
+</html>
